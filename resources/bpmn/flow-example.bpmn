@@ -14,7 +14,7 @@
       <bpmn:outgoing>Flow_1gz3kny</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:sequenceFlow id="Flow_0tmyxlr" sourceRef="Activity_0jlrs4t" targetRef="FlowExampleEndEndEvent" />
-    <bpmn:serviceTask id="Activity_0jlrs4t" name="Hello2" camunda:asyncBefore="true" camunda:expression="${hello2.hello()}">
+    <bpmn:serviceTask id="Activity_0jlrs4t" name="Hello2" camunda:asyncBefore="true" camunda:expression="${hello2.hello(&#34;TEST123&#34;)}">
       <bpmn:incoming>Flow_1gz3kny</bpmn:incoming>
       <bpmn:outgoing>Flow_0tmyxlr</bpmn:outgoing>
     </bpmn:serviceTask>
