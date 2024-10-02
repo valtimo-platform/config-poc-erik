@@ -1,0 +1,330 @@
+{
+    "changesetId": "form-flow-example-v1",
+    "permissions": [
+        {
+            "resourceType": "com.ritense.case.domain.CaseTab",
+            "roleKey": "ROLE_USER",
+            "action": "view",
+            "conditions": []
+        },
+        {
+            "resourceType": "com.ritense.document.domain.impl.JsonSchemaDocument",
+            "roleKey": "ROLE_USER",
+            "action": "create",
+            "conditions": [
+                {
+                    "type": "field",
+                    "field": "documentDefinitionId.name",
+                    "operator": "==",
+                    "value": "flow-example"
+                }
+            ]
+        },
+        {
+            "resourceType": "com.ritense.document.domain.impl.JsonSchemaDocument",
+            "roleKey": "ROLE_USER",
+            "action": "view",
+            "conditions": [
+                {
+                    "type": "field",
+                    "field": "documentDefinitionId.name",
+                    "operator": "==",
+                    "value": "flow-example"
+                }
+            ]
+        },
+        {
+            "resourceType": "com.ritense.document.domain.impl.JsonSchemaDocument",
+            "roleKey": "ROLE_USER",
+            "action": "view_list",
+            "conditions": [
+                {
+                    "type": "field",
+                    "field": "documentDefinitionId.name",
+                    "operator": "==",
+                    "value": "flow-example"
+                }
+            ]
+        },
+        {
+            "resourceType": "com.ritense.document.domain.impl.JsonSchemaDocument",
+            "roleKey": "ROLE_USER",
+            "action": "modify",
+            "conditions": [
+                {
+                    "type": "field",
+                    "field": "documentDefinitionId.name",
+                    "operator": "==",
+                    "value": "flow-example"
+                }
+            ]
+        },
+        {
+            "resourceType": "com.ritense.document.domain.impl.JsonSchemaDocument",
+            "roleKey": "ROLE_USER",
+            "action": "claim",
+            "conditions": [
+                {
+                    "type": "field",
+                    "field": "documentDefinitionId.name",
+                    "operator": "==",
+                    "value": "flow-example"
+                }
+            ]
+        },
+        {
+            "resourceType": "com.ritense.document.domain.impl.JsonSchemaDocument",
+            "roleKey": "ROLE_USER",
+            "action": "assignable",
+            "conditions": [
+                {
+                    "type": "field",
+                    "field": "documentDefinitionId.name",
+                    "operator": "==",
+                    "value": "flow-example"
+                }
+            ]
+        },
+        {
+            "resourceType": "com.ritense.document.domain.impl.JsonSchemaDocument",
+            "roleKey": "ROLE_USER",
+            "action": "assign",
+            "conditions": [
+                {
+                    "type": "field",
+                    "field": "documentDefinitionId.name",
+                    "operator": "==",
+                    "value": "flow-example"
+                }
+            ]
+        },
+        {
+            "resourceType": "com.ritense.document.domain.impl.JsonSchemaDocumentDefinition",
+            "roleKey": "ROLE_USER",
+            "action": "view_list",
+            "conditions": [
+                {
+                    "type": "field",
+                    "field": "id.name",
+                    "operator": "==",
+                    "value": "flow-example"
+                }
+            ]
+        },
+        {
+            "resourceType": "com.ritense.document.domain.impl.JsonSchemaDocumentDefinition",
+            "roleKey": "ROLE_USER",
+            "action": "view",
+            "conditions": [
+                {
+                    "type": "field",
+                    "field": "id.name",
+                    "operator": "==",
+                    "value": "flow-example"
+                }
+            ]
+        },
+        {
+            "resourceType": "com.ritense.document.domain.impl.searchfield.SearchField",
+            "roleKey": "ROLE_USER",
+            "action": "view_list",
+            "conditions": []
+        },
+        {
+            "resourceType": "com.ritense.note.domain.Note",
+            "roleKey": "ROLE_USER",
+            "action": "view",
+            "conditions": [
+                {
+                    "type": "container",
+                    "resourceType": "com.ritense.document.domain.impl.JsonSchemaDocument",
+                    "conditions": [
+                        {
+                            "type": "field",
+                            "field": "documentDefinitionId.name",
+                            "operator": "==",
+                            "value": "flow-example"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "resourceType": "com.ritense.note.domain.Note",
+            "roleKey": "ROLE_USER",
+            "action": "view_list",
+            "conditions": [
+                {
+                    "type": "container",
+                    "resourceType": "com.ritense.document.domain.impl.JsonSchemaDocument",
+                    "conditions": [
+                        {
+                            "type": "field",
+                            "field": "documentDefinitionId.name",
+                            "operator": "==",
+                            "value": "flow-example"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "resourceType": "com.ritense.note.domain.Note",
+            "roleKey": "ROLE_USER",
+            "action": "create",
+            "conditions": [
+                {
+                    "type": "container",
+                    "resourceType": "com.ritense.document.domain.impl.JsonSchemaDocument",
+                    "conditions": [
+                        {
+                            "type": "field",
+                            "field": "documentDefinitionId.name",
+                            "operator": "==",
+                            "value": "flow-example"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "resourceType": "com.ritense.note.domain.Note",
+            "roleKey": "ROLE_USER",
+            "action": "modify",
+            "conditions": [
+                {
+                    "type": "container",
+                    "resourceType": "com.ritense.document.domain.impl.JsonSchemaDocument",
+                    "conditions": [
+                        {
+                            "type": "field",
+                            "field": "documentDefinitionId.name",
+                            "operator": "==",
+                            "value": "flow-example"
+                        }
+                    ]
+                },
+                {
+                    "type": "field",
+                    "field": "createdByUserId",
+                    "operator": "==",
+                    "value": "${currentUserId}"
+                }
+            ]
+        },
+        {
+            "resourceType": "com.ritense.valtimo.camunda.domain.CamundaTask",
+            "roleKey": "ROLE_USER",
+            "action": "view",
+            "conditions": [
+                {
+                    "type": "container",
+                    "resourceType": "com.ritense.valtimo.camunda.domain.CamundaIdentityLink",
+                    "conditions": [
+                        {
+                            "type": "field",
+                            "field": "groupId",
+                            "operator": "==",
+                            "value": "ROLE_USER"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "resourceType": "com.ritense.valtimo.camunda.domain.CamundaTask",
+            "roleKey": "ROLE_USER",
+            "action": "view_list",
+            "conditions": [
+                {
+                    "type": "container",
+                    "resourceType": "com.ritense.valtimo.camunda.domain.CamundaIdentityLink",
+                    "conditions": [
+                        {
+                            "type": "field",
+                            "field": "groupId",
+                            "operator": "==",
+                            "value": "ROLE_USER"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "resourceType": "com.ritense.valtimo.camunda.domain.CamundaTask",
+            "roleKey": "ROLE_USER",
+            "action": "claim",
+            "conditions": [
+                {
+                    "type": "container",
+                    "resourceType": "com.ritense.valtimo.camunda.domain.CamundaIdentityLink",
+                    "conditions": [
+                        {
+                            "type": "field",
+                            "field": "groupId",
+                            "operator": "==",
+                            "value": "ROLE_USER"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "resourceType": "com.ritense.valtimo.camunda.domain.CamundaTask",
+            "roleKey": "ROLE_USER",
+            "action": "assign",
+            "conditions": [
+                {
+                    "type": "container",
+                    "resourceType": "com.ritense.valtimo.camunda.domain.CamundaIdentityLink",
+                    "conditions": [
+                        {
+                            "type": "field",
+                            "field": "groupId",
+                            "operator": "==",
+                            "value": "ROLE_USER"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "resourceType": "com.ritense.valtimo.camunda.domain.CamundaTask",
+            "roleKey": "ROLE_USER",
+            "action": "assignable",
+            "conditions": [
+                {
+                    "type": "container",
+                    "resourceType": "com.ritense.valtimo.camunda.domain.CamundaIdentityLink",
+                    "conditions": [
+                        {
+                            "type": "field",
+                            "field": "groupId",
+                            "operator": "==",
+                            "value": "ROLE_USER"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "resourceType": "com.ritense.valtimo.camunda.domain.CamundaTask",
+            "roleKey": "ROLE_USER",
+            "action": "complete",
+            "conditions": [
+                {
+                    "type": "container",
+                    "resourceType": "com.ritense.valtimo.camunda.domain.CamundaIdentityLink",
+                    "conditions": [
+                        {
+                            "type": "field",
+                            "field": "groupId",
+                            "operator": "==",
+                            "value": "ROLE_USER"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

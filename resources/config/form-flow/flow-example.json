@@ -1,0 +1,46 @@
+{
+    "startStep": "you-like-step",
+    "steps": [
+        {
+            "key": "you-like-step",
+            "type": {
+                "name": "form",
+                "properties": {
+                    "definition": "you-like"
+                }
+            },
+            "nextSteps": [
+                {
+                    "step": "you-like-what-step",
+                    "condition": "${step.submissionData.likesMariah == true}"
+                },
+                {
+                    "step": "you-like-end-step",
+                    "condition": "${step.submissionData.likesMariah == false}"
+                }
+            ]
+        },
+        {
+            "key": "you-like-what-step",
+            "nextStep": "you-like-end-step",
+            "type": {
+                "name": "form",
+                "properties": {
+                    "definition": "you-like-what"
+                }
+            }
+        },
+        {
+            "key": "you-like-end-step",
+            "onBack": [],
+            "onOpen": [],
+            "onComplete": ["${valtimoFormFlow.completeTask(additionalProperties, step.submissionData)}"],
+            "type": {
+                "name": "form",
+                "properties": {
+                    "definition": "you-like-end"
+                }
+            }
+        }
+    ]
+}

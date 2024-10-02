@@ -1,0 +1,23 @@
+{
+    "display": "form",
+    "components": [
+        {
+            "label": "Voornaam",
+            "key": "voornaam",
+            "type": "textfield",
+            "input": true,
+            "validate": {
+                "maxLength": 10,
+                "unique": false,
+                "multiple": false
+            }
+        },
+        {
+            "type": "button",
+            "label": "Submit",
+            "key": "submit",
+            "disableOnInvalid": true,
+            "input": true
+        }
+    ]
+}
